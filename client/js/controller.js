@@ -23,6 +23,8 @@ MoviesListCtrl.resolve = {
     }
 };
 
+
+
 function MoviesAddCtrl ($scope, $http, $location) {
     'use strict';
     $scope.movie = {};
