@@ -2,7 +2,9 @@
     <thead>
         <tr>
             <th>Title</th>
+            <th>Year</th>
         </tr>
+
     </thead>
     <tbody>
         <tr ng-repeat="movie in movies | orderBy:'title'">
@@ -11,6 +13,7 @@
                     {{movie.title}}
                 </a>
             </td>
+            <td>{{movie.year || 'Unknown'}}</td>
         </tr>
     </tbody>
 </table>
