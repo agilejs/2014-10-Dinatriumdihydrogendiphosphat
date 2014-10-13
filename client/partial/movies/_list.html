@@ -1,14 +1,20 @@
 <table class="table table-striped table-hover">
     <thead>
         <tr>
-            <th><a ng-click="sort='title'; reverse=!reverse">Title</a></th>
+            <th><a ng-click="sort='title'; reverseTitle=!reverseTitle">Title</a></th>
+            <th><a ng-click="sort='year'; reverse=!reverse">Year</a></th>
         </tr>
     </thead>
     <tbody>
-        <tr ng-repeat="movie in movies | orderBy:'title' : reverse">
+        <tr ng-repeat="movie in movies | orderBy:'title' : reverseTitle">
             <td>l
                 <a href="#" ng-href="/movies/{{movie.id}}">
                     {{movie.title}}
+                </a>
+            </td>
+            <td>l
+                <a href="#" ng-href="/movies/{{movie.id}}">
+                    {{movie.year}}
                 </a>
             </td>
         </tr>
