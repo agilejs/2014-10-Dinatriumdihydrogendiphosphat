@@ -22,6 +22,7 @@ angular.module('MovieDatabase', ['ngRoute']).config(
         resolve: MoviesListCtrl.resolve,
         templateUrl: '/partial/movies/list.html'
     })
+
     .when('/movies/new', {
         controller: MoviesAddCtrl,
         templateUrl: '/partial/movies/add.html'
@@ -35,6 +36,11 @@ angular.module('MovieDatabase', ['ngRoute']).config(
         controller: MovieEditCtrl,
         resolve: MovieEditCtrl.resolve,
         templateUrl: '/partial/movies/edit.html'
+    })
+    .when('/movies/:sortMode', {
+        controller: MoviesListSortCtrl,
+        resolve: MoviesListSortCtrl.resolve,
+        templateUrl: '/partial/movies/list.html'
     })
     .when('/404', {
         controller: NotFoundCtrl,
