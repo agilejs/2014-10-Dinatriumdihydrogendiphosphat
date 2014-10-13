@@ -37,11 +37,7 @@ angular.module('MovieDatabase', ['ngRoute']).config(
         resolve: MovieEditCtrl.resolve,
         templateUrl: '/partial/movies/edit.html'
     })
-    .when('/movies/:sortMode', {
-        controller: MoviesListSortCtrl,
-        resolve: MoviesListSortCtrl.resolve,
-        templateUrl: '/partial/movies/list.html'
-    })
+
     .when('/404', {
         controller: NotFoundCtrl,
         templateUrl: '/partial/notFound.html'

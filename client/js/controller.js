@@ -23,20 +23,7 @@ MoviesListCtrl.resolve = {
     }
 };
 
-function MoviesListSortCtrl ($scope, $location, moviesResponse) {
-    'use strict';
-    $scope.movies = moviesResponse.data;
-    $scope.add = function () {
-        $location.path('/movies/new');
-    };
-}
 
-MoviesListSortCtrl.resolve = {
-    moviesResponse: function ($http) {
-        'use strict';
-        return $http.get('/movies');
-    }
-};
 
 function MoviesAddCtrl ($scope, $http, $location) {
     'use strict';
